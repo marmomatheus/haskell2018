@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2018-06-14 16:07:58.719458 UTC
+2018-06-14 18:47:17.463745 UTC
 
 interface main@main:Application [orphan module] 8001
-  interface hash: 81986973c4a7146056581a8db1551f77
+  interface hash: 780a4e7b59fccfc677fcbff01bbdcaa9
   ABI hash: 9ef49efe4993f9d651e6ae752f05759d
   export-list hash: d8253853b805ebf18f70edf7c935d259
   orphan hash: 8a839eb3a1f4f528b19b6baf331f6543
@@ -250,11 +250,11 @@ import  -/  Foundation 642f2259dc701752f500c24055371a04
   NoticiaGetR e0cbe3f1cdf3f63f0a9df31192ad3297
   NoticiaListarR e3da6796310ca8f9023f163b7eeb0637
   resourcesApp e8c3bf9d1a493cc1f6cb395bdeb925bc
-import  -/  Noticia 843909f46a4c521285d47d267fb39d85
+import  -/  Noticia 6d6cf318e82bfe7937254b9e4d50b922
   exports: f4e85e88608fccc72c1cec4d39211ade
   deleteNoticiaDeleteR eb141c9f6ad5fa3a9144d4fe1221eeeb
   getNoticiaGetR f0ed8b838764b1670aec7f601e169a70
-  getNoticiaListarR 246235cb29a9afcafaf24d2e9427a6f9
+  getNoticiaListarR 772d25be6f89725776557d40b244d67e
   postNoticiaCriarR b654f189b1dbce4c99bc4c1d6552483b
 import  -/  path-pieces-0.2.1@path-pieces-0.2.1-EQ6YdjSujhVE8ECatsqK1q:Web.PathPieces 348dda38f1ee102032eafd2f94207cab
 import  -/  wai-3.2.1.1@wai-3.2.1.1-f77bMYZGLQBAD3XJrvGiW:Network.Wai.Internal f27d53fc30ea41b04db63492b5b558a8
