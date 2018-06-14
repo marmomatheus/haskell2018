@@ -11,9 +11,9 @@ import Network.HTTP.Types.Status
 -- Cadastra 1 Anuncio
 postAnuncioCriarR :: Handler ()
 postAnuncioCriarR = do
+    addHeader "Access-Control-Allow-Origin" "*"
     pers <- requireJsonBody :: Handler Anuncio
     pid <- runDB $ insert pers
-    addHeader "Access-Control-Allow-Origin" "*"
     sendResponse (object [pack "resp" .= pack ("CREATED " ++ (show $ fromSqlKey pid))])
 
 -- Lista todos os Anuncioes
@@ -33,7 +33,7 @@ getAnuncioGetR pid = do
 -- Deleta 1 Anuncio
 deleteAnuncioDeleteR :: AnuncioId -> Handler Value
 deleteAnuncioDeleteR pid = do
-	_ <- runDB $ get404 pid
-	runDB $ delete pid
+    _ <- runDB $ get404 pid
+    runDB $ delete pid
     addHeader "Access-Control-Allow-Origin" "*"
-	sendStatusJSON noContent204 (object [])
+    sendStatusJSON noContent204 (object [])

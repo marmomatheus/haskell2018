@@ -44,6 +44,34 @@
                 <h3>Notícias</h3>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col s12">
+                <h4>Nova Noticia</h4>
+            </div>
+            <form class="col s12" action="http://127.0.0.1:8080/noticia/criar" method="post">
+                <div class="row">
+                        <select class="autores" name="autorid" required>
+                            <option value="" selected>Selecione um Autor</option>
+                        </select>
+                    <div class="input-field col m12 s12">
+                        <input id="titulo" name="titulo" type="text" class="validate" required>
+                        <label for="titulo">Título</label>
+                    </div>
+
+                    <div class="input-field col m12 s12">
+                        <textarea id="descricao" name="descricao" class="materialize-textarea" required></textarea>
+                        <label for="descricao">Descricao</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m12 ">
+                        <input type="submit" class="btn right" value="Cadastrar">
+                    </div>
+                </div>
+            </form>
+        </div>
+
         <hr class="divider">
         <div class="row">
             <div class="col s12 m8">
@@ -105,6 +133,23 @@
         true }); });
 
         $.ajax({
+            url: 'http://127.0.0.1:8080/autor/listar',
+            type: 'get',
+            dataType: 'json',
+            success: function(data){
+                autores = data.resp;
+
+                for(i = 0; i < autores.length; i++){
+                    nome = autores[i].nome;
+                    id = autores[i].id
+                    $('.autores').append('<option value="'+id+'">'+nome+'</option>');
+                }
+                
+                $('select').formSelect();
+            }
+        });
+
+        $.ajax({
             url: 'http://127.0.0.1:8080/noticia/listar',
             type: 'get',
             dataType: 'json',
@@ -123,6 +168,26 @@
                 }
             }
         });
+
+        $('form').on('submit', function(e){
+            e.preventDefault();
+            form = $(this);
+            console.log(form.nome);
+            $.ajax({
+                url: form.attr('action'),
+                type: 'post',
+                dataType: 'json',
+                proccessData: "{autorid: "+form.autorid+", titulo: "+form.titulo+", descricao: "+form.descricao+"}",
+                success: function(resp){
+                    alert('Cadastrado com sucesso!');
+                    form.reset();
+                },
+                error: function(){
+                    alert("Erro");
+                }
+            });
+        });
+
     </script>
 </body>
 

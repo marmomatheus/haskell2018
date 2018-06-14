@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2018-06-14 18:47:17.463745 UTC
+2018-06-14 21:12:30.607929 UTC
 
 interface main@main:Application [orphan module] 8001
-  interface hash: 780a4e7b59fccfc677fcbff01bbdcaa9
+  interface hash: 8bc97575bd46776196cbbc08427c59de
   ABI hash: 9ef49efe4993f9d651e6ae752f05759d
   export-list hash: d8253853b805ebf18f70edf7c935d259
   orphan hash: 8a839eb3a1f4f528b19b6baf331f6543
@@ -212,24 +212,24 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          zlib-0.6.1.1@zlib-0.6.1.1-4cYT5jyS3jw6zZyCUZMz3T:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.0.0:Data.Functor 6fc476505db88d678632a4a838125f13
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
-import  -/  Anuncio 935a7fd0fbb2179b74bfe9b82db83e63
-  exports: a58d9c1ae792e2f98279abe609bf2ec9
-  deleteAnuncioDeleteR 8f4d9561ad3574f6896fb0f5f0ac6f3f
-  getAnuncioGetR 84fa4a520e71969e683f068da05c2d51
-  getAnuncioListarR e31cf039a7689e48961fefeef35a64c1
-  postAnuncioCriarR c2da1a4531ce723893f0eec944f99d5d
-import  -/  Autor 9ecc2ac4ba50c956843b2011534f84aa
+import  -/  Anuncio 2e21bc611059a25aa1303d6c2ddb063a
+  exports: 923878f4d674176ec64a25a346b867e4
+  deleteAnuncioDeleteR 4d418b0185da007b7fe9f69eda6f3245
+  getAnuncioGetR 42ecd88b5c71bcdd47df4a75531296e5
+  getAnuncioListarR 9c7a1a0eb74cf38530e0e087c7e1aa7c
+  postAnuncioCriarR 48bb9dd0944c04e29e8c2b860ac9c084
+import  -/  Autor d24c932f268932628b4baedf036b3ba1
   exports: 0318dcd6cf8a9f7ec2686b87494c5e1e
-  deleteAutorDeleteR 063e62d6a6d19ec218b25f28d0ca8a48
-  getAutorGetR 5ee7104fce8d323ed51bfad396fa9a52
-  getAutorListarR a933d87f3db67b794815f5d3f4d54884
-  postAutorCriarR b19d5ee383b784de08ef2bbabda9978f
-import  -/  Comentario da3b2f5a88b72876de4667206ac3f806
+  deleteAutorDeleteR 2ec99fb892fa2492b8e95b99f5ceae18
+  getAutorGetR 9a22036b28166022ce4c433e524e6580
+  getAutorListarR bcaff2a04e8024871145d8dbfef0664f
+  postAutorCriarR 431d1919836e31fa083e67578b729b79
+import  -/  Comentario dc3aec5d1bdf8b8ff5e2567b649121ea
   exports: c69eaed0dda0e3234a58fa3fd5c8cf0e
-  deleteComentarioDeleteR 4ff72ebcc9705a2104ac25c3f43a1ce0
-  getComentarioGetR aab60606174fc53def840aab210354ac
-  getComentarioListarR 800bc3d9338556ed90f0bf65392ffee6
-  postComentarioCriarR 5321ffc58d04ef96a7fb5424601ff546
+  deleteComentarioDeleteR 6bbe3ed15f627f77ef4ab383fb483806
+  getComentarioGetR 456f86116886854a544921865ec7b531
+  getComentarioListarR 8202386f92898f39f007358bd9447259
+  postComentarioCriarR df0424ea6ddeeac1e8d858151b56dccc
 import  -/  Foundation 642f2259dc701752f500c24055371a04
   exports: 6bc1187457c9722024275d42af1a3e76
   AnuncioCriarR 8ea7c4333946b2e1af01d642e711017f
@@ -250,12 +250,12 @@ import  -/  Foundation 642f2259dc701752f500c24055371a04
   NoticiaGetR e0cbe3f1cdf3f63f0a9df31192ad3297
   NoticiaListarR e3da6796310ca8f9023f163b7eeb0637
   resourcesApp e8c3bf9d1a493cc1f6cb395bdeb925bc
-import  -/  Noticia 6d6cf318e82bfe7937254b9e4d50b922
+import  -/  Noticia c5adf25537a58a960af5a9c9a09ea5e6
   exports: f4e85e88608fccc72c1cec4d39211ade
-  deleteNoticiaDeleteR eb141c9f6ad5fa3a9144d4fe1221eeeb
-  getNoticiaGetR f0ed8b838764b1670aec7f601e169a70
-  getNoticiaListarR 772d25be6f89725776557d40b244d67e
-  postNoticiaCriarR b654f189b1dbce4c99bc4c1d6552483b
+  deleteNoticiaDeleteR 37d62087da22ccf06f66cb00917774fb
+  getNoticiaGetR 830a7d04c0d946149da554ab83f98133
+  getNoticiaListarR bad83f355db5f5990fa26433fb17c97a
+  postNoticiaCriarR 137cc606439eff7c73fbdcdc84613fd0
 import  -/  path-pieces-0.2.1@path-pieces-0.2.1-EQ6YdjSujhVE8ECatsqK1q:Web.PathPieces 348dda38f1ee102032eafd2f94207cab
 import  -/  wai-3.2.1.1@wai-3.2.1.1-f77bMYZGLQBAD3XJrvGiW:Network.Wai.Internal f27d53fc30ea41b04db63492b5b558a8
 import  -/  yesod-1.4.3@yesod-1.4.3-C03jiEjpula1AfTrVwgG5B:Yesod 21d9c388f61b9154796ef66274ecbec0

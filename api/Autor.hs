@@ -33,7 +33,7 @@ getAutorGetR pid = do
 -- Deleta 1 Autor
 deleteAutorDeleteR :: AutorId -> Handler Value
 deleteAutorDeleteR pid = do
-	_ <- runDB $ get404 pid
-	runDB $ delete pid
+    _ <- runDB $ get404 pid
+    runDB $ delete pid
     addHeader "Access-Control-Allow-Origin" "*"
-	sendStatusJSON noContent204 (object [])
+    sendStatusJSON noContent204 (object [])

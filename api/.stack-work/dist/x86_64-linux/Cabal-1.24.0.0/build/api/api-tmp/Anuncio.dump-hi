@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2018-06-14 18:47:15.881605 UTC
+2018-06-14 21:12:28.359728 UTC
 
 interface main@main:Anuncio 8001
-  interface hash: f2d6e3ada760d6b4a9f98d61c8e4c5de
-  ABI hash: 935a7fd0fbb2179b74bfe9b82db83e63
-  export-list hash: a58d9c1ae792e2f98279abe609bf2ec9
-  orphan hash: 0bdd724f0c121a36101f213471cb1477
+  interface hash: df9b3794b755f26d5c31de2e16af8d62
+  ABI hash: 2e21bc611059a25aa1303d6c2ddb063a
+  export-list hash: 923878f4d674176ec64a25a346b867e4
+  orphan hash: 4384864f62f452011816368286c163aa
   flag hash: 1ad434832a4ad10fe676743253b144b5
   sig of: Nothing
   used TH splices: False
@@ -318,7 +318,7 @@ d5d4e4690064d7b2b3a94849b6e5ebeb
                    @ a
                    Anuncio.$s$fMonadHandlerHandlerT_$cp1MonadHandler_$dMonad
                    eta) -}
-00f24382a431b5fb85400c26faaefff2
+01eb27624ca594ef6370a34336c7d264
   $s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT ::
     Control.Monad.IO.Class.MonadIO
       (Yesod.Core.Types.HandlerT site GHC.Types.IO)
@@ -329,7 +329,7 @@ d5d4e4690064d7b2b3a94849b6e5ebeb
                      @ site)
                   (Anuncio.$s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT_$cliftIO
                      @ site) -}
-cbce674d9ef5dfc735497942763ae29f
+f19e98bd0afa9b17d6a9ca06fff3ee31
   $s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT_$cliftIO ::
     GHC.Types.IO a -> Yesod.Core.Types.HandlerT site GHC.Types.IO a
   {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,A>,
@@ -338,8 +338,8 @@ cbce674d9ef5dfc735497942763ae29f
                  let {
                    eta1 :: GHC.Types.IO a = GHC.Base.id @ (GHC.Types.IO a) eta
                  } in
-                 (\ (ds :: Yesod.Core.Types.HandlerData
-                             site (Yesod.Core.Types.MonadRoute GHC.Types.IO)) ->
+                 (\ (ds1 :: Yesod.Core.Types.HandlerData
+                              site (Yesod.Core.Types.MonadRoute GHC.Types.IO)) ->
                   eta1)
                    `cast`
                  (Sym (Yesod.Core.Types.N:HandlerT[0]
@@ -364,22 +364,24 @@ d7c28002fbbe3a73d727835a640be380
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-d36cb67312554e71f4bb19c7689cceab
-  $wouter ::
-    Data.Text.Array.MArray GHC.Prim.RealWorld
-    -> GHC.Types.Int
-    -> [GHC.Types.Char]
-    -> GHC.Prim.Int#
+403ffc09c92c2ad1237c6c1be6d2123e
+  $wpostAnuncioCriarR ::
+    Yesod.Core.Types.YesodRequest
+    -> Yesod.Core.Types.RunHandlerEnv Foundation.App
+    -> GHC.Prim.MutVar# GHC.Prim.RealWorld Yesod.Core.Types.GHState
+    -> (Yesod.Routes.Class.Route Foundation.App
+        -> Yesod.Core.Types.MonadRoute GHC.Types.IO)
+    -> GHC.Prim.MutVar#
+         GHC.Prim.RealWorld Control.Monad.Trans.Resource.Internal.ReleaseMap
     -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 6, Strictness: <S,U><S,U><S,U><S,U><L,U><S,U>,
      Inline: [0] -}
-8f4d9561ad3574f6896fb0f5f0ac6f3f
+4d418b0185da007b7fe9f69eda6f3245
   deleteAnuncioDeleteR ::
     Foundation.AnuncioId
     -> Foundation.Handler Data.Aeson.Types.Internal.Value
-  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+  {- Arity: 3, Strictness: <L,U><L,U(U,U,U,U,U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Anuncio.deleteAnuncioDeleteR1
                   `cast`
@@ -392,7 +394,7 @@ d36cb67312554e71f4bb19c7689cceab
                                     <Foundation.App>_N
                                     <GHC.Types.IO>_N
                                     <Data.Aeson.Types.Internal.Value>_N))) -}
-771b3ba449af8b219450e319659ce752
+b70d4ab7b1901e4002f1d6c968d5bc77
   deleteAnuncioDeleteR1 ::
     Foundation.AnuncioId
     -> Yesod.Core.Types.HandlerData
@@ -400,7 +402,7 @@ d36cb67312554e71f4bb19c7689cceab
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Aeson.Types.Internal.Value #)
-  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+  {- Arity: 3, Strictness: <L,U><L,U(U,U,U,U,U)><S,U>,
      Unfolding: (\ (pid :: Foundation.AnuncioId)
                    (eta :: Yesod.Core.Types.HandlerData
                              Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))
@@ -422,7 +424,7 @@ d36cb67312554e71f4bb19c7689cceab
                           @ Foundation.Anuncio
                           (Foundation.$fYesodPersistApp_$s$fMonadBaseControlbHandlerT
                              @ Foundation.App)
-                          (case ipv1 of wild { Foundation.App ds -> ds })
+                          (case ipv1 of wild { Foundation.App ds2 -> ds2 })
                           (Database.Persist.Sql.Run.runSqlConn
                              @ (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
                              @ Database.Persist.Sql.Types.Internal.SqlBackend
@@ -438,7 +440,7 @@ d36cb67312554e71f4bb19c7689cceab
                                    <*>_N
                                    (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
                                    <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
-                             (Anuncio.deleteAnuncioDeleteR6 pid)))
+                             (Anuncio.deleteAnuncioDeleteR7 pid)))
                          `cast`
                        (Yesod.Core.Types.N:HandlerT[0]
                             <Foundation.App>_N <GHC.Types.IO>_N <Foundation.Anuncio>_N)
@@ -463,7 +465,7 @@ d36cb67312554e71f4bb19c7689cceab
                           @ ()
                           (Foundation.$fYesodPersistApp_$s$fMonadBaseControlbHandlerT
                              @ Foundation.App)
-                          (case ipv5 of wild { Foundation.App ds -> ds })
+                          (case ipv5 of wild { Foundation.App ds4 -> ds4 })
                           (Database.Persist.Sql.Run.runSqlConn
                              @ (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
                              @ Database.Persist.Sql.Types.Internal.SqlBackend
@@ -484,7 +486,7 @@ d36cb67312554e71f4bb19c7689cceab
                                 @ Foundation.Anuncio
                                 (Anuncio.$s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT
                                    @ Foundation.App)
-                                Anuncio.deleteAnuncioDeleteR4
+                                Anuncio.deleteAnuncioDeleteR5
                                   `cast`
                                 (GHC.Classes.(%,%)
                                    <Database.Persist.Class.PersistEntity.PersistEntity
@@ -501,11 +503,42 @@ d36cb67312554e71f4bb19c7689cceab
                         `cast`
                       (GHC.Types.N:IO[0] <()>_R)
                         ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case eta
+                        `cast`
+                      (Yesod.Core.Types.HandlerData
+                         (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                   <GHC.Types.IO>_N <Foundation.App>_N))
+                         (Sub (Yesod.Core.Types.D:R:MonadRouteIO[0])))_R of wild { Yesod.Core.Types.HandlerData ds5 ds6 dt ds7 dt1 ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ Yesod.Core.Types.GHState
+                        dt
+                        ipv6 of ds8 { (#,#) ipv8 ipv9 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ Yesod.Core.Types.GHState
+                        dt
+                        (case ipv9 of wild1 { Yesod.Core.Types.GHState ds9 ds10 ds11 ds12 ds13 ds14 ->
+                         Yesod.Core.Types.GHState
+                           ds9
+                           ds10
+                           ds11
+                           ds12
+                           ds13
+                           (\ (eta2 :: [Yesod.Core.Types.Header]) ->
+                            ds14 `cast` (Data.Monoid.N:Endo[0] <[Yesod.Core.Types.Header]>_R)
+                              (GHC.Types.:
+                                 @ Yesod.Core.Types.Header
+                                 Anuncio.deleteAnuncioDeleteR_eta
+                                 eta2))
+                             `cast`
+                           (Sym (Data.Monoid.N:Endo[0] <[Yesod.Core.Types.Header]>_R)) })
+                        ipv8 of s2# { DEFAULT ->
                  GHC.Prim.raiseIO#
                    @ GHC.Exception.SomeException
                    @ Data.Aeson.Types.Internal.Value
                    Anuncio.deleteAnuncioDeleteR2
-                   ipv6 } } } }) -}
+                   s2# } } } } } } }) -}
 36134bb420a9e25743b52c84736b43eb
   deleteAnuncioDeleteR2 :: GHC.Exception.SomeException
   {- Unfolding: (Yesod.Core.Types.$fExceptionHandlerContents_$ctoException
@@ -530,20 +563,25 @@ d90eb5bf171e904037f44717696a7c60
                       (Yesod.Core.Types.ContentBuilder
                          nt `cast` (Sym (Data.ByteString.Builder.Internal.N:Builder[0]))
                          (GHC.Base.Nothing @ GHC.Types.Int))) } } }) -}
-377669bc9457840d9fbb273657c010e0
-  deleteAnuncioDeleteR4 ::
+ac4ffc0ca03eba23815fe014ab5f9ce5
+  deleteAnuncioDeleteR4 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Data.Text.Show.unpackCString#
+                        "*"# of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+c1cae770e4260833ba4f1b2392a91068
+  deleteAnuncioDeleteR5 ::
     (Database.Persist.Class.PersistEntity.PersistEntity
        Foundation.Anuncio,
      Database.Persist.Sql.Types.Internal.SqlBackend
      Data.Type.Equality.~ Database.Persist.Sql.Types.Internal.SqlBackend)
   {- Strictness: m,
      Unfolding: ((Foundation.$fPersistEntityAnuncio,
-                  Anuncio.deleteAnuncioDeleteR5
+                  Anuncio.deleteAnuncioDeleteR6
                     `cast`
                   (Sym (Data.Type.Equality.N:~[0]
                             <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
-64e63ad2f335bb75b012bf74144f85ed
-  deleteAnuncioDeleteR5 ::
+213319a0db5d1343251b22eb5f424561
+  deleteAnuncioDeleteR6 ::
     Database.Persist.Sql.Types.Internal.SqlBackend
     GHC.Types.~~ Database.Persist.Sql.Types.Internal.SqlBackend
   {- HasNoCafRefs, Strictness: m,
@@ -553,8 +591,8 @@ d90eb5bf171e904037f44717696a7c60
                    @ Database.Persist.Sql.Types.Internal.SqlBackend
                    @ Database.Persist.Sql.Types.Internal.SqlBackend
                    @~ <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
-0ba3519572498ee3b528e528f01ab5da
-  deleteAnuncioDeleteR6 ::
+d50641ea9316ba34bb302533bfc7323d
+  deleteAnuncioDeleteR7 ::
     Database.Persist.Class.PersistEntity.Key Foundation.Anuncio
     -> Control.Monad.Trans.Reader.ReaderT
          Database.Persist.Sql.Types.Internal.SqlBackend
@@ -567,7 +605,7 @@ d90eb5bf171e904037f44717696a7c60
                    (Anuncio.$s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT
                       @ Foundation.App)
                    Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend
-                   Anuncio.deleteAnuncioDeleteR4
+                   Anuncio.deleteAnuncioDeleteR5
                      `cast`
                    (GHC.Classes.(%,%)
                       <Database.Persist.Class.PersistEntity.PersistEntity
@@ -576,11 +614,22 @@ d90eb5bf171e904037f44717696a7c60
                          <*>_N
                          (Sym (Foundation.D:R:PersistEntityBackendAnuncio[0]))
                          (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R) -}
-84fa4a520e71969e683f068da05c2d51
+8a6090bc13c2633fa9ebd588aae3cca2
+  deleteAnuncioDeleteR_eta :: Yesod.Core.Types.Header
+  {- Strictness: m3,
+     Unfolding: (Yesod.Core.Types.Header
+                   Anuncio.deleteAnuncioDeleteR_f
+                   Anuncio.deleteAnuncioDeleteR4) -}
+f9efd65585256366bbdde0e8456b8436
+  deleteAnuncioDeleteR_f :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Data.Text.Show.unpackCString#
+                        "Access-Control-Allow-Origin"# of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+42ecd88b5c71bcdd47df4a75531296e5
   getAnuncioGetR ::
     Foundation.AnuncioId
     -> Foundation.Handler Data.Aeson.Types.Internal.Value
-  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+  {- Arity: 3, Strictness: <L,U><L,U(U,U,U,U,U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Anuncio.getAnuncioGetR1
                   `cast`
@@ -593,7 +642,7 @@ d90eb5bf171e904037f44717696a7c60
                                     <Foundation.App>_N
                                     <GHC.Types.IO>_N
                                     <Data.Aeson.Types.Internal.Value>_N))) -}
-669364367520e2c1c10f557a0dc87835
+67926f18bde45e859d4700e261f6e32a
   getAnuncioGetR1 ::
     Foundation.AnuncioId
     -> Yesod.Core.Types.HandlerData
@@ -601,7 +650,7 @@ d90eb5bf171e904037f44717696a7c60
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Aeson.Types.Internal.Value #)
-  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+  {- Arity: 3, Strictness: <L,U><L,U(U,U,U,U,U)><S,U>,
      Unfolding: (\ (pid :: Foundation.AnuncioId)
                    (eta :: Yesod.Core.Types.HandlerData
                              Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))
@@ -623,7 +672,7 @@ d90eb5bf171e904037f44717696a7c60
                           @ Foundation.Anuncio
                           (Foundation.$fYesodPersistApp_$s$fMonadBaseControlbHandlerT
                              @ Foundation.App)
-                          (case ipv1 of wild { Foundation.App ds -> ds })
+                          (case ipv1 of wild { Foundation.App ds2 -> ds2 })
                           (Database.Persist.Sql.Run.runSqlConn
                              @ (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
                              @ Database.Persist.Sql.Types.Internal.SqlBackend
@@ -639,7 +688,7 @@ d90eb5bf171e904037f44717696a7c60
                                    <*>_N
                                    (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
                                    <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
-                             (Anuncio.deleteAnuncioDeleteR6 pid)))
+                             (Anuncio.deleteAnuncioDeleteR7 pid)))
                          `cast`
                        (Yesod.Core.Types.N:HandlerT[0]
                             <Foundation.App>_N <GHC.Types.IO>_N <Foundation.Anuncio>_N)
@@ -647,11 +696,42 @@ d90eb5bf171e904037f44717696a7c60
                         `cast`
                       (GHC.Types.N:IO[0] <Foundation.Anuncio>_R)
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case eta
+                        `cast`
+                      (Yesod.Core.Types.HandlerData
+                         (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                   <GHC.Types.IO>_N <Foundation.App>_N))
+                         (Sub (Yesod.Core.Types.D:R:MonadRouteIO[0])))_R of wild { Yesod.Core.Types.HandlerData ds3 ds4 dt ds5 dt1 ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ Yesod.Core.Types.GHState
+                        dt
+                        ipv2 of ds6 { (#,#) ipv4 ipv5 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ Yesod.Core.Types.GHState
+                        dt
+                        (case ipv5 of wild1 { Yesod.Core.Types.GHState ds7 ds8 ds9 ds10 ds11 ds12 ->
+                         Yesod.Core.Types.GHState
+                           ds7
+                           ds8
+                           ds9
+                           ds10
+                           ds11
+                           (\ (eta2 :: [Yesod.Core.Types.Header]) ->
+                            ds12 `cast` (Data.Monoid.N:Endo[0] <[Yesod.Core.Types.Header]>_R)
+                              (GHC.Types.:
+                                 @ Yesod.Core.Types.Header
+                                 Anuncio.deleteAnuncioDeleteR_eta
+                                 eta2))
+                             `cast`
+                           (Sym (Data.Monoid.N:Endo[0] <[Yesod.Core.Types.Header]>_R)) })
+                        ipv4 of s2# { DEFAULT ->
                  GHC.Prim.raiseIO#
                    @ GHC.Exception.SomeException
                    @ Data.Aeson.Types.Internal.Value
                    (Yesod.Core.Types.$fExceptionHandlerContents_$ctoException
-                      (case Yesod.Core.Content.typeJson of dt { Data.ByteString.Internal.PS ipv4 ipv5 ipv6 ipv7 ->
+                      (case Yesod.Core.Content.typeJson of dt2 { Data.ByteString.Internal.PS ipv6 ipv7 ipv8 ipv9 ->
                        case Data.Aeson.Types.Internal.$sfromList1
                               @ Data.Aeson.Types.Internal.Value
                               (GHC.Types.:
@@ -660,26 +740,26 @@ d90eb5bf171e904037f44717696a7c60
                                  (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair))
                               (Data.HashMap.Base.Empty
                                  @ Data.Text.Internal.Text
-                                 @ Data.Aeson.Types.Internal.Value) of dt1 { DEFAULT ->
+                                 @ Data.Aeson.Types.Internal.Value) of dt3 { DEFAULT ->
                        case (Data.Aeson.Encode.Builder.encodeToBuilder
-                               (Data.Aeson.Types.Internal.Object dt1))
+                               (Data.Aeson.Types.Internal.Object dt3))
                               `cast`
                             (Data.ByteString.Builder.Internal.N:Builder[0]) of nt { DEFAULT ->
                        Yesod.Core.Types.HCContent
                          Network.HTTP.Types.Status.status200
                          (Yesod.Core.Types.TypedContent
-                            dt
+                            dt2
                             (Yesod.Core.Types.ContentBuilder
                                nt `cast` (Sym (Data.ByteString.Builder.Internal.N:Builder[0]))
                                (GHC.Base.Nothing @ GHC.Types.Int))) } } }))
-                   ipv2 } }) -}
+                   s2# } } } } }) -}
 8552c62a5de79785558619ee3b8335b1
   getAnuncioGetR2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "resp"#) -}
-e31cf039a7689e48961fefeef35a64c1
+9c7a1a0eb74cf38530e0e087c7e1aa7c
   getAnuncioListarR ::
     Foundation.Handler Data.Aeson.Types.Internal.Value
-  {- Arity: 2, Strictness: <L,U><S,U>,
+  {- Arity: 2, Strictness: <L,U(U,U,U,U,U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Anuncio.getAnuncioListarR1
                   `cast`
@@ -691,14 +771,14 @@ e31cf039a7689e48961fefeef35a64c1
                                <Foundation.App>_N
                                <GHC.Types.IO>_N
                                <Data.Aeson.Types.Internal.Value>_N))) -}
-bc07625a1c3c60a5def4418206f247d2
+36d4efc762fd3cab8f5574ad6f3933a8
   getAnuncioListarR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Aeson.Types.Internal.Value #)
-  {- Arity: 2, Strictness: <L,U><S,U>,
+  {- Arity: 2, Strictness: <L,U(U,U,U,U,U)><S,U>,
      Unfolding: (\ (r :: Yesod.Core.Types.HandlerData
                            Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
@@ -714,121 +794,150 @@ bc07625a1c3c60a5def4418206f247d2
                                       Foundation.Anuncio]>_N))
                         r
                         s of ds1 { (#,#) ipv ipv1 ->
+                 case r `cast`
+                      (Yesod.Core.Types.HandlerData
+                         (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                   <GHC.Types.IO>_N <Foundation.App>_N))
+                         (Sub (Yesod.Core.Types.D:R:MonadRouteIO[0])))_R of wild { Yesod.Core.Types.HandlerData ds2 ds3 dt ds4 dt1 ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ Yesod.Core.Types.GHState
+                        dt
+                        ipv of ds5 { (#,#) ipv2 ipv3 ->
+                 case GHC.Prim.writeMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ Yesod.Core.Types.GHState
+                        dt
+                        (case ipv3 of wild1 { Yesod.Core.Types.GHState ds6 ds7 ds8 ds9 ds10 ds11 ->
+                         Yesod.Core.Types.GHState
+                           ds6
+                           ds7
+                           ds8
+                           ds9
+                           ds10
+                           (\ (eta2 :: [Yesod.Core.Types.Header]) ->
+                            ds11 `cast` (Data.Monoid.N:Endo[0] <[Yesod.Core.Types.Header]>_R)
+                              (GHC.Types.:
+                                 @ Yesod.Core.Types.Header
+                                 Anuncio.deleteAnuncioDeleteR_eta
+                                 eta2))
+                             `cast`
+                           (Sym (Data.Monoid.N:Endo[0] <[Yesod.Core.Types.Header]>_R)) })
+                        ipv2 of s2# { DEFAULT ->
                  GHC.Prim.raiseIO#
                    @ GHC.Exception.SomeException
                    @ Data.Aeson.Types.Internal.Value
                    (Yesod.Core.Types.$fExceptionHandlerContents_$ctoException
-                      (case Yesod.Core.Content.typeJson of dt { Data.ByteString.Internal.PS ipv2 ipv3 ipv4 ipv5 ->
+                      (case Yesod.Core.Content.typeJson of dt2 { Data.ByteString.Internal.PS ipv4 ipv5 ipv6 ipv7 ->
+                       let {
+                         w :: [GHC.Types.Char]
+                         = case Data.Aeson.Types.Internal.$sfromList1
+                                  @ Data.Aeson.Types.Internal.Value
+                                  (GHC.Types.:
+                                     @ Data.Aeson.Types.Internal.Pair
+                                     (Anuncio.getAnuncioGetR2,
+                                      case GHC.Magic.runRW#
+                                             @ 'GHC.Types.PtrRepLifted
+                                             @ (Data.Vector.Vector Data.Aeson.Types.Internal.Value)
+                                             (\ (s1 :: GHC.Prim.State#
+                                                         GHC.Prim.RealWorld)[OneShot] ->
+                                              case GHC.Prim.newArray#
+                                                     @ Data.Aeson.Types.Internal.Value
+                                                     @ (Control.Monad.Primitive.PrimState
+                                                          (GHC.ST.ST GHC.Prim.RealWorld))
+                                                     0#
+                                                     (Data.Vector.Mutable.uninitialised
+                                                        @ Data.Aeson.Types.Internal.Value)
+                                                     s1
+                                                       `cast`
+                                                     (GHC.Prim.State#
+                                                        (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                  <GHC.Prim.RealWorld>_N)))_R of ds6 { (#,#) ipv8 ipv9 ->
+                                              case Anuncio.getAnuncioListarR_$sfoldlM_loop
+                                                     ipv8
+                                                       `cast`
+                                                     (GHC.Prim.State#
+                                                        (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                             <GHC.Prim.RealWorld>_N))_R
+                                                     (GHC.Base.map
+                                                        @ (Database.Persist.Class.PersistEntity.Entity
+                                                             Foundation.Anuncio)
+                                                        @ Data.Aeson.Types.Internal.Value
+                                                        Foundation.$fToJSONEntity_$ctoJSON
+                                                        ipv1)
+                                                     0#
+                                                     0#
+                                                     ipv9
+                                                     @~ (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                                         (GHC.ST.ST
+                                                                                                            GHC.Prim.RealWorld)>_N <Data.Aeson.Types.Internal.Value>_N)
+                                                     0# of ds7 { (#,#) ipv10 ipv11 ->
+                                              case ipv11 of wild5 { (,) v' n ->
+                                              case v'
+                                                     `cast`
+                                                   (Sub (Data.Vector.D:R:MutableVector[0]) <Control.Monad.Primitive.PrimState
+                                                                                              (GHC.ST.ST
+                                                                                                 GHC.Prim.RealWorld)>_N <Data.Aeson.Types.Internal.Value>_N) of wild1 { Data.Vector.Mutable.MVector dt3 dt4 dt5 ->
+                                              case n of dt6 { GHC.Types.I# dt7 ->
+                                              case GHC.Prim.unsafeFreezeArray#
+                                                     @ (Control.Monad.Primitive.PrimState
+                                                          (GHC.ST.ST GHC.Prim.RealWorld))
+                                                     @ Data.Aeson.Types.Internal.Value
+                                                     dt5
+                                                     ipv10
+                                                       `cast`
+                                                     (GHC.Prim.State#
+                                                        (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                  <GHC.Prim.RealWorld>_N)))_R of ds8 { (#,#) ipv12 ipv13 ->
+                                              (# ipv12
+                                                   `cast`
+                                                 (GHC.Prim.State#
+                                                    (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                         <GHC.Prim.RealWorld>_N))_R,
+                                                 Data.Vector.Vector
+                                                   @ Data.Aeson.Types.Internal.Value
+                                                   dt3
+                                                   dt7
+                                                   ipv13 #) } } } } } }) of ds6 { (#,#) ipv8 ipv9 ->
+                                      case ipv9 of dt3 { Data.Vector.Vector ipv10 ipv11 ipv12 ->
+                                      Data.Aeson.Types.Internal.Array dt3 } })
+                                     (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair))
+                                  (Data.HashMap.Base.Empty
+                                     @ Data.Text.Internal.Text
+                                     @ Data.Aeson.Types.Internal.Value) of dt3 { DEFAULT ->
+                           case Data.Text.Internal.Builder.$wtoLazyTextWith
+                                  112#
+                                  (Data.Aeson.Encode.encodeToTextBuilder
+                                     (Data.Aeson.Types.Internal.Object dt3)) of dt4 { DEFAULT ->
+                           Yesod.Core.Content.$wunfold dt4 0# } }
+                       } in
                        Yesod.Core.Types.HCContent
                          Network.HTTP.Types.Status.status200
                          (Yesod.Core.Types.TypedContent
-                            dt
+                            dt2
                             (Yesod.Core.Types.ContentBuilder
-                               (\ @ r1 ->
-                                let {
-                                  w :: [GHC.Types.Char]
-                                  = case Data.Aeson.Types.Internal.$sfromList1
-                                           @ Data.Aeson.Types.Internal.Value
-                                           (GHC.Types.:
-                                              @ Data.Aeson.Types.Internal.Pair
-                                              (Anuncio.getAnuncioGetR2,
-                                               case GHC.Magic.runRW#
-                                                      @ 'GHC.Types.PtrRepLifted
-                                                      @ (Data.Vector.Vector
-                                                           Data.Aeson.Types.Internal.Value)
-                                                      (\ (s1 :: GHC.Prim.State#
-                                                                  GHC.Prim.RealWorld)[OneShot] ->
-                                                       case GHC.Prim.newArray#
-                                                              @ Data.Aeson.Types.Internal.Value
-                                                              @ (Control.Monad.Primitive.PrimState
-                                                                   (GHC.ST.ST GHC.Prim.RealWorld))
-                                                              0#
-                                                              (Data.Vector.Mutable.uninitialised
-                                                                 @ Data.Aeson.Types.Internal.Value)
-                                                              s1
-                                                                `cast`
-                                                              (GHC.Prim.State#
-                                                                 (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                                                           <GHC.Prim.RealWorld>_N)))_R of ds2 { (#,#) ipv6 ipv7 ->
-                                                       case Anuncio.getAnuncioListarR_$sfoldlM_loop
-                                                              ipv6
-                                                                `cast`
-                                                              (GHC.Prim.State#
-                                                                 (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                                                      <GHC.Prim.RealWorld>_N))_R
-                                                              (GHC.Base.map
-                                                                 @ (Database.Persist.Class.PersistEntity.Entity
-                                                                      Foundation.Anuncio)
-                                                                 @ Data.Aeson.Types.Internal.Value
-                                                                 Foundation.$fToJSONEntity_$ctoJSON
-                                                                 ipv1)
-                                                              0#
-                                                              0#
-                                                              ipv7
-                                                              @~ (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
-                                                                                                                  (GHC.ST.ST
-                                                                                                                     GHC.Prim.RealWorld)>_N <Data.Aeson.Types.Internal.Value>_N)
-                                                              0# of ds3 { (#,#) ipv8 ipv9 ->
-                                                       case ipv9 of wild5 { (,) v' n ->
-                                                       case v'
-                                                              `cast`
-                                                            (Sub (Data.Vector.D:R:MutableVector[0]) <Control.Monad.Primitive.PrimState
-                                                                                                       (GHC.ST.ST
-                                                                                                          GHC.Prim.RealWorld)>_N <Data.Aeson.Types.Internal.Value>_N) of wild { Data.Vector.Mutable.MVector dt1 dt2 dt3 ->
-                                                       case n of dt5 { GHC.Types.I# dt6 ->
-                                                       case GHC.Prim.unsafeFreezeArray#
-                                                              @ (Control.Monad.Primitive.PrimState
-                                                                   (GHC.ST.ST GHC.Prim.RealWorld))
-                                                              @ Data.Aeson.Types.Internal.Value
-                                                              dt3
-                                                              ipv8
-                                                                `cast`
-                                                              (GHC.Prim.State#
-                                                                 (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                                                           <GHC.Prim.RealWorld>_N)))_R of ds4 { (#,#) ipv10 ipv11 ->
-                                                       (# ipv10
-                                                            `cast`
-                                                          (GHC.Prim.State#
-                                                             (Control.Monad.Primitive.D:R:PrimStateST[0]
-                                                                  <GHC.Prim.RealWorld>_N))_R,
-                                                          Data.Vector.Vector
-                                                            @ Data.Aeson.Types.Internal.Value
-                                                            dt1
-                                                            dt6
-                                                            ipv11 #) } } } } } }) of ds2 { (#,#) ipv6 ipv7 ->
-                                               case ipv7 of dt1 { Data.Vector.Vector ipv8 ipv9 ipv10 ->
-                                               Data.Aeson.Types.Internal.Array dt1 } })
-                                              (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair))
-                                           (Data.HashMap.Base.Empty
-                                              @ Data.Text.Internal.Text
-                                              @ Data.Aeson.Types.Internal.Value) of dt1 { DEFAULT ->
-                                    case Data.Text.Internal.Builder.$wtoLazyTextWith
-                                           112#
-                                           (Data.Aeson.Encode.encodeToTextBuilder
-                                              (Data.Aeson.Types.Internal.Object
-                                                 dt1)) of dt2 { DEFAULT ->
-                                    Yesod.Core.Content.$wunfold dt2 0# } }
-                                } in
-                                (\ (w1 :: Data.ByteString.Builder.Internal.BufferRange
-                                          -> GHC.Types.IO
-                                               (Data.ByteString.Builder.Internal.BuildSignal r1))
-                                   (w2 :: Data.ByteString.Builder.Internal.BufferRange)
-                                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                                 case w2 of ww { Data.ByteString.Builder.Internal.BufferRange ww1 ww2 ->
-                                 Yesod.Core.Content.$fToTypedContentValue2 @ r1 w w1 ww1 ww2 w3 })
-                                  `cast`
-                                (<Data.ByteString.Builder.Internal.BufferRange
-                                  -> GHC.Types.IO
-                                       (Data.ByteString.Builder.Internal.BuildSignal r1)>_R
-                                 ->_R <Data.ByteString.Builder.Internal.BufferRange>_R
-                                 ->_R Sym (GHC.Types.N:IO[0]
-                                               <Data.ByteString.Builder.Internal.BuildSignal
-                                                  r1>_R)))
+                               (\ @ r1
+                                  (w1 :: Data.ByteString.Builder.Internal.BufferRange
+                                         -> GHC.Types.IO
+                                              (Data.ByteString.Builder.Internal.BuildSignal r1))
+                                  (w2 :: Data.ByteString.Builder.Internal.BufferRange)
+                                  (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                case w2 of ww { Data.ByteString.Builder.Internal.BufferRange ww1 ww2 ->
+                                Yesod.Core.Content.$fToTypedContentValue2 @ r1 w w1 ww1 ww2 w3 })
                                  `cast`
-                               (Sym (Data.ByteString.Builder.Internal.N:Builder[0]))
+                               (Trans
+                                    (forall (r1 :: <*>_N).
+                                     <Data.ByteString.Builder.Internal.BufferRange
+                                      -> GHC.Types.IO
+                                           (Data.ByteString.Builder.Internal.BuildSignal r1)>_R
+                                     ->_R <Data.ByteString.Builder.Internal.BufferRange>_R
+                                     ->_R Sym (GHC.Types.N:IO[0]
+                                                   <Data.ByteString.Builder.Internal.BuildSignal
+                                                      r1>_R))
+                                    (Sym (Data.ByteString.Builder.Internal.N:Builder[0])))
                                (GHC.Base.Nothing @ GHC.Types.Int))) }))
-                   ipv }) -}
-075ad104d92d603e5d43c5c6e929d8c2
+                   s2# } } } }) -}
+4173fd5e0e7f6d392cddca51fa1be9b0
   getAnuncioListarR2 ::
     Database.Persist.Sql.Types.Internal.SqlBackend
     -> Yesod.Core.Types.HandlerT
@@ -839,13 +948,13 @@ bc07625a1c3c60a5def4418206f247d2
      Unfolding: InlineRule (1, True, False)
                 (\ (r1 :: Database.Persist.Sql.Types.Internal.SqlBackend) ->
                  let {
-                   ds :: Yesod.Core.Types.HandlerT
-                           Foundation.App
-                           GHC.Types.IO
-                           (Data.Acquire.Internal.Acquire
-                              (Data.Conduit.Internal.Conduit.Source
-                                 GHC.Types.IO
-                                 (Database.Persist.Class.PersistEntity.Entity Foundation.Anuncio)))
+                   ds1 :: Yesod.Core.Types.HandlerT
+                            Foundation.App
+                            GHC.Types.IO
+                            (Data.Acquire.Internal.Acquire
+                               (Data.Conduit.Internal.Conduit.Source
+                                  GHC.Types.IO
+                                  (Database.Persist.Class.PersistEntity.Entity Foundation.Anuncio)))
                    = Anuncio.getAnuncioListarR_m1
                        `cast`
                      (Control.Monad.Trans.Reader.N:ReaderT[0]
@@ -862,7 +971,7 @@ bc07625a1c3c60a5def4418206f247d2
                  (\ (r :: Yesod.Core.Types.HandlerData
                             Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                     (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                  case (ds
+                  case (ds1
                           `cast`
                         (Yesod.Core.Types.N:HandlerT[0]
                              <Foundation.App>_N
@@ -880,7 +989,7 @@ bc07625a1c3c60a5def4418206f247d2
                                   GHC.Types.IO
                                   (Database.Persist.Class.PersistEntity.Entity
                                      Foundation.Anuncio))>_R)
-                         s of ds1 { (#,#) ipv ipv1 ->
+                         s of ds2 { (#,#) ipv ipv1 ->
                   (Data.Acquire.Internal.with
                      @ GHC.Types.IO
                      @ (Data.Conduit.Internal.Conduit.Source
@@ -980,7 +1089,7 @@ edf618b34995e1df401b5fc81207b12d
                 Data.Aeson.Types.Internal.Value,
               GHC.Types.Int) #)
   {- Arity: 7, Strictness: <S,U><S,1*U><L,U><L,U><L,U><L,U><L,U> -}
-5d65a54dba6bfc1405b9f7c6292bcdbe
+405709864ae8a4a8cc4d1c544978f375
   getAnuncioListarR_m1 ::
     Control.Monad.Trans.Reader.ReaderT
       Database.Persist.Sql.Types.Internal.SqlBackend
@@ -993,7 +1102,7 @@ edf618b34995e1df401b5fc81207b12d
                    @ Foundation.Anuncio
                    @ (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
                    @ GHC.Types.IO
-                   Anuncio.deleteAnuncioDeleteR4
+                   Anuncio.deleteAnuncioDeleteR5
                      `cast`
                    (GHC.Classes.(%,%)
                       <Database.Persist.Class.PersistEntity.PersistEntity
@@ -1008,9 +1117,9 @@ edf618b34995e1df401b5fc81207b12d
                    (GHC.Types.[]
                       @ (Database.Persist.Class.PersistEntity.Filter Foundation.Anuncio))
                    Anuncio.getAnuncioListarR3) -}
-c2da1a4531ce723893f0eec944f99d5d
+48bb9dd0944c04e29e8c2b860ac9c084
   postAnuncioCriarR :: Foundation.Handler ()
-  {- Arity: 2, Strictness: <L,U><S,U>,
+  {- Arity: 2, Strictness: <S(SSSSL),1*U(U,U,U,U,U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Anuncio.postAnuncioCriarR1
                   `cast`
@@ -1020,191 +1129,20 @@ c2da1a4531ce723893f0eec944f99d5d
                       ->_R Sym (GHC.Types.N:IO[0] <()>_R))
                      (Sym (Yesod.Core.Types.N:HandlerT[0]
                                <Foundation.App>_N <GHC.Types.IO>_N <()>_N))) -}
-d5d1795a284d850706ccd463441ae0bb
+662fd5bda510edd2412476441e037df3
   postAnuncioCriarR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 2, Strictness: <L,U><S,U>,
-     Unfolding: (\ (r :: Yesod.Core.Types.HandlerData
+  {- Arity: 2, Strictness: <S(SSSSL),1*U(U,U,U,U,U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Yesod.Core.Types.HandlerData
                            Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))
-                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case (Anuncio.postAnuncioCriarR4
-                         `cast`
-                       (Yesod.Core.Types.N:HandlerT[0]
-                            <Foundation.App>_N <GHC.Types.IO>_N <Foundation.Anuncio>_N)
-                         r)
-                        `cast`
-                      (GHC.Types.N:IO[0] <Foundation.Anuncio>_R)
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 case (Foundation.$fYesodPersistApp3
-                         `cast`
-                       (Yesod.Core.Types.N:HandlerT[0]
-                            <Foundation.App>_N
-                            <GHC.Types.IO>_N
-                            (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
-                                 <GHC.Types.IO>_N <Foundation.App>_N))
-                         r)
-                        `cast`
-                      (GHC.Types.N:IO[0] <Foundation.App>_R)
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 case ((Data.Pool.withResource
-                          @ (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
-                          @ Database.Persist.Sql.Types.Internal.SqlBackend
-                          @ (Database.Persist.Class.PersistEntity.Key Foundation.Anuncio)
-                          (Foundation.$fYesodPersistApp_$s$fMonadBaseControlbHandlerT
-                             @ Foundation.App)
-                          (case ipv3 of wild { Foundation.App ds -> ds })
-                          (Database.Persist.Sql.Run.runSqlConn
-                             @ (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
-                             @ Database.Persist.Sql.Types.Internal.SqlBackend
-                             @ (Database.Persist.Class.PersistEntity.Key Foundation.Anuncio)
-                             (Foundation.$fYesodPersistApp_$s$fMonadBaseControlbHandlerT
-                                @ Foundation.App)
-                             Foundation.$fYesodPersistApp2
-                               `cast`
-                             (GHC.Classes.(%,%)
-                                <Database.Persist.Class.PersistStore.IsPersistBackend
-                                   Database.Persist.Sql.Types.Internal.SqlBackend>_N
-                                ((Data.Type.Equality.~)
-                                   <*>_N
-                                   (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
-                                   <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
-                             (Anuncio.postAnuncioCriarR3 ipv1)))
-                         `cast`
-                       (Yesod.Core.Types.N:HandlerT[0]
-                            <Foundation.App>_N
-                            <GHC.Types.IO>_N
-                            <Database.Persist.Class.PersistEntity.Key Foundation.Anuncio>_N)
-                         r)
-                        `cast`
-                      (GHC.Types.N:IO[0]
-                           <Database.Persist.Class.PersistEntity.Key Foundation.Anuncio>_R)
-                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
-                 GHC.Prim.raiseIO#
-                   @ GHC.Exception.SomeException
-                   @ ()
-                   (Yesod.Core.Types.$fExceptionHandlerContents_$ctoException
-                      (case Yesod.Core.Content.typeJson of dt { Data.ByteString.Internal.PS ipv6 ipv7 ipv8 ipv9 ->
-                       Yesod.Core.Types.HCContent
-                         Network.HTTP.Types.Status.status200
-                         (Yesod.Core.Types.TypedContent
-                            dt
-                            (Yesod.Core.Types.ContentBuilder
-                               (\ @ r1 ->
-                                let {
-                                  w :: [GHC.Types.Char]
-                                  = case Data.Aeson.Types.Internal.$sfromList1
-                                           @ Data.Aeson.Types.Internal.Value
-                                           (GHC.Types.:
-                                              @ Data.Aeson.Types.Internal.Pair
-                                              (Anuncio.getAnuncioGetR2,
-                                               case GHC.CString.unpackAppendCString#
-                                                      "CREATED "#
-                                                      (case ipv5
-                                                              `cast`
-                                                            (Trans
-                                                                 (Foundation.D:R:KeyAnuncio0[0])
-                                                                 (Trans
-                                                                      (Foundation.N:R:KeyAnuncio[0])
-                                                                      (Trans
-                                                                           (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0])
-                                                                           (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0])))) of wild { GHC.Int.I64# x# ->
-                                                       case GHC.Show.$wshowSignedInt
-                                                              0#
-                                                              x#
-                                                              (GHC.Types.[]
-                                                                 @ GHC.Types.Char) of ww4 { (#,#) ww1 ww6 ->
-                                                       GHC.Types.:
-                                                         @ GHC.Types.Char
-                                                         ww1
-                                                         ww6 } }) of dt1 { DEFAULT ->
-                                               case GHC.Magic.runRW#
-                                                      @ 'GHC.Types.PtrRepLifted
-                                                      @ Data.Text.Internal.Text
-                                                      (\ (s1 :: GHC.Prim.State#
-                                                                  GHC.Prim.RealWorld)[OneShot] ->
-                                                       case GHC.Prim.newByteArray#
-                                                              @ GHC.Prim.RealWorld
-                                                              8#
-                                                              s1 of ds4 { (#,#) ipv10 ipv11 ->
-                                                       Anuncio.$wouter
-                                                         (Data.Text.Array.MArray
-                                                            @ GHC.Prim.RealWorld
-                                                            ipv11)
-                                                         Anuncio.postAnuncioCriarR2
-                                                         dt1
-                                                         0#
-                                                         ipv10 }) of ds4 { (#,#) ipv10 ipv11 ->
-                                               case ipv11 of dt2 { Data.Text.Internal.Text ipv12 ipv13 ipv14 ->
-                                               Data.Aeson.Types.Internal.String dt2 } } })
-                                              (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair))
-                                           (Data.HashMap.Base.Empty
-                                              @ Data.Text.Internal.Text
-                                              @ Data.Aeson.Types.Internal.Value) of dt1 { DEFAULT ->
-                                    case Data.Text.Internal.Builder.$wtoLazyTextWith
-                                           112#
-                                           (Data.Aeson.Encode.encodeToTextBuilder
-                                              (Data.Aeson.Types.Internal.Object
-                                                 dt1)) of dt2 { DEFAULT ->
-                                    Yesod.Core.Content.$wunfold dt2 0# } }
-                                } in
-                                (\ (w1 :: Data.ByteString.Builder.Internal.BufferRange
-                                          -> GHC.Types.IO
-                                               (Data.ByteString.Builder.Internal.BuildSignal r1))
-                                   (w2 :: Data.ByteString.Builder.Internal.BufferRange)
-                                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                                 case w2 of ww { Data.ByteString.Builder.Internal.BufferRange ww1 ww2 ->
-                                 Yesod.Core.Content.$fToTypedContentValue2 @ r1 w w1 ww1 ww2 w3 })
-                                  `cast`
-                                (<Data.ByteString.Builder.Internal.BufferRange
-                                  -> GHC.Types.IO
-                                       (Data.ByteString.Builder.Internal.BuildSignal r1)>_R
-                                 ->_R <Data.ByteString.Builder.Internal.BufferRange>_R
-                                 ->_R Sym (GHC.Types.N:IO[0]
-                                               <Data.ByteString.Builder.Internal.BuildSignal
-                                                  r1>_R)))
-                                 `cast`
-                               (Sym (Data.ByteString.Builder.Internal.N:Builder[0]))
-                               (GHC.Base.Nothing @ GHC.Types.Int))) }))
-                   ipv4 } } }) -}
-0c5237e63a7930d2cdec7bb49960dd08
-  postAnuncioCriarR2 :: GHC.Types.Int
-  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
-b5d9b630830857b6f79a3edf074ff047
-  postAnuncioCriarR3 ::
-    Foundation.Anuncio
-    -> Control.Monad.Trans.Reader.ReaderT
-         Database.Persist.Sql.Types.Internal.SqlBackend
-         (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
-         (Database.Persist.Class.PersistEntity.Key Foundation.Anuncio)
-  {- Unfolding: (Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend_$cinsert
-                   @ (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
-                   @ Foundation.Anuncio
-                   (Anuncio.$s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT
-                      @ Foundation.App)
-                   Anuncio.deleteAnuncioDeleteR4
-                     `cast`
-                   (GHC.Classes.(%,%)
-                      <Database.Persist.Class.PersistEntity.PersistEntity
-                         Foundation.Anuncio>_N
-                      ((Data.Type.Equality.~)
-                         <*>_N
-                         (Sym (Foundation.D:R:PersistEntityBackendAnuncio[0]))
-                         (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R) -}
-c5a018d7bbbabda7c2994c8510f14d3f
-  postAnuncioCriarR4 ::
-    Yesod.Core.Types.HandlerT
-      Foundation.App GHC.Types.IO Foundation.Anuncio
-  {- Unfolding: (Yesod.Core.Json.requireJsonBody
-                   @ (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
-                   @ Foundation.Anuncio
-                   (Anuncio.$s$fMonadHandlerHandlerT @ Foundation.App)
-                   Foundation.$fFromJSONAnuncio_$cparseJSON
-                     `cast`
-                   (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
-                             <Foundation.Anuncio>_N))) -}
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { Yesod.Core.Types.HandlerData ww1 ww2 ww3 ww4 ww6 ->
+                 Anuncio.$wpostAnuncioCriarR ww1 ww2 ww3 ww4 ww6 w1 }) -}
 "SPEC/Anuncio $fApplicativeHandlerT_$creturn @ IO _" [ALWAYS] forall @ site
                                                                      ($dMonad :: GHC.Base.Monad
                                                                                    GHC.Types.IO)
