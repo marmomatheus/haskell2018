@@ -1,0 +1,19 @@
+/autor/listar						AutorListarR			GET
+/autor/criar						AutorCriarR				POST
+/autor/get/#AutorId					AutorGetR				GET
+/autor/delete/#AutorId				AutorDeleteR			DELETE
+
+/noticia/listar						NoticiaListarR			GET
+/noticia/criar						NoticiaCriarR			POST
+/noticia/get/#NoticiaId				NoticiaGetR				GET
+/noticia/delete/#NoticiaId			NoticiaDeleteR			DELETE
+
+/comentario/listar					ComentarioListarR		GET
+/comentario/criar					ComentarioCriarR		POST
+/comentario/get/#ComentarioId		ComentarioGetR			GET
+/comentario/delete/#ComentarioId	ComentarioDeleteR		DELETE
+
+/anuncio/listar						AnuncioListarR			GET
+/anuncio/criar						AnuncioCriarR			POST
+/anuncio/get/#AnuncioId				AnuncioGetR				GET
+/anuncio/delete/#AnuncioId			AnuncioDeleteR			DELETE
